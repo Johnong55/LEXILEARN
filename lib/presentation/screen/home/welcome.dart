@@ -1,10 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:lexilearn/data/api/Authenticate.dart';
+import 'package:lexilearn/presentation/screen/auth/login.dart';
+import 'package:lexilearn/presentation/screen/home/Homepage.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Định nghĩa trong build, ok với stateless vì chỉ gọi khi bấm nút
+    Future<void> checkLoginStatus() async {
+      final loggedIn = await isLoggedIn();
+
+      if (loggedIn) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const Homepage()),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const LoginPage()),
+        );
+      }
+    }
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -13,12 +33,12 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Text(
                         "LEXI LEARN",
                         style: TextStyle(
@@ -32,36 +52,41 @@ class WelcomePage extends StatelessWidget {
                     SizedBox(
                       width: 80,
                       child: Image.asset("assets/welcome2.png"),
-                    )
+                    ),
                   ],
                 ),
               ),
-
-              SizedBox(height: 5),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 10,right: 30
-                ),
+              const SizedBox(height: 5),
+              const Padding(
+                padding: EdgeInsets.only(left: 10, right: 30),
                 child: Text(
-                  "we will help you gain knowledge that will change your life. participate in challenges and get discounts on training",
+                  "We will help you gain knowledge that will change your life. Participate in challenges and get discounts on training.",
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white, 
-                  // Match with "ExtraBold"
+                    color: Colors.white,
                   ),
                 ),
               ),
-              SizedBox(height: 40),
-              Image(image: AssetImage("assets/welcome.png")),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
+              Center(
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.45,
+                  child: Image.asset("assets/welcome.png", fit: BoxFit.contain),
+                ),
+              ),
+
+              const SizedBox(height: 40),
+
               Center(
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await checkLoginStatus();
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30), // Bo tròn góc
+                      borderRadius: BorderRadius.circular(30),
                     ),
                     padding: const EdgeInsets.symmetric(
                       horizontal: 80,
