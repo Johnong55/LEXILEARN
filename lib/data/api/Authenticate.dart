@@ -50,3 +50,36 @@ Future<void> logout() async{
 await  prefs.remove('jwt_token');
 
 }
+
+
+Future<bool> signUp({
+  required String displayname,
+  required String email,
+  required String password,
+}) async {
+  final url = Uri.parse("http://192.168.1.17:8080/api/auth/register");
+  
+  try {
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'displayname': displayname,
+        'email': email,
+        'password': password,
+      }),
+    );
+
+    if (response.statusCode == 200) {
+      // Xử lý thêm nếu muốn
+      return true;
+    } else {
+      // In lỗi nếu có
+      print('Đăng ký thất bại: ${response.body}');
+      return false;
+    }
+  } catch (e) {
+    print('Lỗi kết nối: $e');
+    return false;
+  }
+}
