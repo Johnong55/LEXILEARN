@@ -12,15 +12,12 @@
 - 📈 **Theo dõi tiến độ học tập**: Biết được từ nào đã học, còn yếu, cần ôn lại.
 
 
----
-
-## 🛠 Công nghệ sử dụng
-
 | Thành phần | Công nghệ |
 |------------|-----------|
 | UI         | Flutter (Material 3) |
 | Trạng thái | Riverpod |
 | API GPT    | `http` (gọi OpenAI trực tiếp từ client) |
+
 | CI/CD      | GitHub Actions + Codemagic |
 
 ---

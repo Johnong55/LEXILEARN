@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lexilearn/presentation/screen/auth/login.dart';
+import 'package:lexilearn/presentation/screen/home/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,9 +32,9 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
-      home: LoginPage(),
+      home: WelcomePage(),
     );
   }
 }
