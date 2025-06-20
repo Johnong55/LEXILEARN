@@ -10,18 +10,14 @@
 - 🤖 **Tạo câu hỏi bằng ChatGPT**: Sinh câu trắc nghiệm, điền từ, đặt câu... từ chính từ vựng bạn đang học.
 - ⏳ **Hệ thống ôn tập Spaced Repetition (SRS)**: Gợi ý thời điểm học lại giúp bạn nhớ lâu hơn.
 - 📈 **Theo dõi tiến độ học tập**: Biết được từ nào đã học, còn yếu, cần ôn lại.
-- 📴 **Lưu trữ local hoàn toàn**: Không cần đăng nhập, không cần mạng (trừ lúc gọi GPT).
 
----
-
-## 🛠 Công nghệ sử dụng
 
 | Thành phần | Công nghệ |
 |------------|-----------|
 | UI         | Flutter (Material 3) |
 | Trạng thái | Riverpod |
 | API GPT    | `http` (gọi OpenAI trực tiếp từ client) |
-| Lưu trữ    | Hive (dạng NoSQL local database) |
+
 | CI/CD      | GitHub Actions + Codemagic |
 
 ---
