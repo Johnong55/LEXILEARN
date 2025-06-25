@@ -64,7 +64,7 @@ Future<bool> signUp({
       url,
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
-        'displayname': displayname,
+        'displayName': displayname,
         'email': email,
         'password': password,
       }),

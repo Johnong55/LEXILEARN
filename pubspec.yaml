@@ -37,7 +37,11 @@ dependencies:
   http: ^1.4.0
   shared_preferences: ^2.5.3
   jwt_decoder: ^2.0.1
-  
+  flutter_launcher_icons: ^0.14.4
+flutter_launcher_icons:
+  android: "launcher_icon"
+  iOS: true,
+  image_path: "assets/iconApp.png"
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -61,11 +65,17 @@ flutter:
     - assets/welcome2.png
     - assets/Login.png
     - assets/icons/
+    - assets/home/
+    - assets/fonts/
 
   fonts:
     - family: PlayfairDisplay
       fonts:
-        - asset: assets/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf
+        - asset: assets/fonts/Playfair_Display/static/PlayfairDisplay-ExtraBold.ttf
+          weight: 800
+    - family: Winky_Sans
+      fonts:
+        - asset: assets/fonts/Winky_Sans/static/WinkySans-ExtraBold.ttf
           weight: 800
 
   #

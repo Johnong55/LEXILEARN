@@ -48,7 +48,7 @@ class _SignUpPageState extends State<SignUpPage> {
       if (success) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => const Homepage()),
+          MaterialPageRoute(builder: (_) =>  Homepage()),
         );
       } else {
         _showErrorDialog('Sign up failed. Please try again.');
