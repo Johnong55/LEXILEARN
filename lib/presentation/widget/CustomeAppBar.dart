@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lexilearn/presentation/widget/bell.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -30,23 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
                 ),
                 // Notification Bell
-                Stack(
-                  children: [
-                    const Icon(Icons.notifications_none, color: Colors.white, size: 28),
-                    Positioned(
-                      right: 0,
-                      top: 0,
-                      child: Container(
-                        width: 8,
-                        height: 8,
-                        decoration: const BoxDecoration(
-                          color: Colors.red,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    )
-                  ],
-                )
+              BellSwingIcon(),
               ],
             ),
             const SizedBox(height: 12),

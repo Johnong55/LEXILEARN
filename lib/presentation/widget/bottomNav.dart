@@ -20,18 +20,29 @@ class CustomBottomNav extends StatelessWidget {
         splashFactory: NoSplash.splashFactory,
       ),
       child: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed, // ✅ Add this line
+
         currentIndex: currentIndex,
         onTap: onTap,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black, // <- changed this
         selectedItemColor: Colors.redAccent,
         unselectedItemColor: Colors.grey.shade300,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         elevation: 0,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.house_rounded), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.flash_on), label: "Flashcards"),
-          BottomNavigationBarItem(icon: Icon(Icons.card_giftcard), label: "Rewards"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.house_rounded),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.flash_on),
+            label: "Flashcards",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: "Rewards",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.tune), label: "Settings"),
         ],
       ),
