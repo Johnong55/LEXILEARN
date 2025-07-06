@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:lexilearn/presentation/screen/auth/login.dart';
 import 'package:lexilearn/presentation/screen/home/welcome.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lexilearn/presentation/screen/pratice/flashcard.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
-      home: WelcomePage(),
+      home: FlashcardHome(),
     );
   }
 }

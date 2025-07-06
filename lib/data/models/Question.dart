@@ -1,9 +1,8 @@
-import 'dart:ffi';
 
 class Question {
-  Long id ;
+  int id ;
   String content;
-  Long questionID;  
+  int questionID;  
   String vocabularyWord;
   Question({required this.content, required this.id,required this.questionID,required  this.vocabularyWord});
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lexilearn/presentation/screen/home/page/Home.dart';
 import 'package:lexilearn/presentation/screen/home/page/Setting.dart';
-import 'package:lexilearn/presentation/widget/CustomeAppBar.dart';
-import 'package:lexilearn/presentation/widget/bottomNav.dart';
+import 'package:lexilearn/presentation/widget/general/CustomeAppBar.dart';
+import 'package:lexilearn/presentation/widget/general/bottomNav.dart';
 
 class Homepage extends StatefulWidget {
   @override

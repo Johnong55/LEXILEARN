@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:lexilearn/data/api/Authenticate.dart';
 import 'package:lexilearn/presentation/screen/auth/SignUp.dart';
 import 'package:lexilearn/presentation/screen/home/Homepage.dart';
-import 'package:lexilearn/presentation/widget/buildSocialIcon.dart';
-import 'package:lexilearn/presentation/widget/buildTextField.dart'; // Add this import
+import 'package:lexilearn/presentation/widget/general/buildSocialIcon.dart';
+import 'package:lexilearn/presentation/widget/general/buildTextField.dart'; // Add this import
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -164,7 +164,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: CircularProgressIndicator(
                             strokeWidth: 2,
                             valueColor: AlwaysStoppedAnimation<Color>(
-                              Colors.black,
+                              Colors.white,
                             ),
                           ),
                         )
@@ -233,3 +233,4 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lexilearn/data/api/Authenticate.dart';
 import 'package:lexilearn/presentation/screen/auth/login.dart';
 import 'package:lexilearn/presentation/screen/home/Homepage.dart';
-import 'package:lexilearn/presentation/widget/buildTextField.dart';
+import 'package:lexilearn/presentation/widget/general/buildTextField.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});

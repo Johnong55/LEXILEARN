@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lexilearn/presentation/widget/bell.dart';
+import 'package:lexilearn/presentation/widget/general/bell.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
@@ -10,8 +10,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
       height: preferredSize.height,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-      decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 233, 190, 155), // Purple background
+      decoration:  BoxDecoration(
+        color: Colors.cyanAccent.withOpacity(0.3), // Purple background
         borderRadius: BorderRadius.vertical(
           bottom: Radius.circular(20),
         ),
